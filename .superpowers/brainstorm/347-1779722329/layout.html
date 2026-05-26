@@ -1,0 +1,86 @@
+<h2>「减少 AI 幻觉」页面布局方案</h2>
+<p class="subtitle">请选择你偏好的页面布局风格</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="A" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background:#fff7f0;border:2px solid #f97316;border-radius:12px;padding:20px;font-family:sans-serif;">
+        <div style="background:#f97316;color:white;padding:12px 20px;border-radius:8px;margin-bottom:16px;font-size:18px;font-weight:bold;text-align:center;">🧠 减少 AI 幻觉</div>
+        <p style="color:#888;font-size:11px;margin-bottom:6px;">输入待优化的提示词</p>
+        <div style="border:1px solid #fed7aa;border-radius:8px;background:#fff;padding:10px;height:70px;margin-bottom:10px;color:#aaa;font-size:11px;">在这里输入你的提示词...</div>
+        <div style="text-align:right;">
+          <span style="background:#f97316;color:white;padding:7px 18px;border-radius:8px;font-size:12px;font-weight:bold;">🔍 查询事实</span>
+        </div>
+        <div style="border-left:4px solid #f97316;background:#fff7f0;padding:10px;margin-top:14px;border-radius:0 8px 8px 0;font-size:11px;color:#555;">
+          <div style="font-weight:bold;color:#f97316;margin-bottom:4px;">✨ 优化后的提示词</div>
+          <div style="color:#777;">你是专家。[你的提示词]请提供主要观点的3个不同出处的网页链接以便我查验...</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — 紧凑单栏</h3>
+      <p>输入框在上，结果在下，垂直流式布局，适合专注操作</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="B" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background:#fff7f0;border:2px solid #f97316;border-radius:12px;padding:20px;font-family:sans-serif;">
+        <div style="background:linear-gradient(135deg,#f97316,#fb923c);color:white;padding:14px 20px;border-radius:8px;margin-bottom:14px;display:flex;align-items:center;gap:8px;">
+          <span style="font-size:22px;">🧠</span>
+          <span style="font-size:16px;font-weight:bold;">减少 AI 幻觉</span>
+          <span style="margin-left:auto;font-size:10px;opacity:0.8;">AI Hallucination Reducer</span>
+        </div>
+        <div style="display:flex;gap:10px;align-items:flex-start;">
+          <div style="flex:1;">
+            <p style="color:#888;font-size:10px;margin-bottom:4px;">输入待优化的提示词</p>
+            <div style="border:2px solid #fed7aa;border-radius:8px;background:#fff;padding:8px;height:75px;color:#aaa;font-size:10px;">输入你的提示词...</div>
+          </div>
+          <div style="padding-top:20px;">
+            <span style="display:block;background:#f97316;color:white;padding:8px 14px;border-radius:8px;font-size:11px;font-weight:bold;white-space:nowrap;box-shadow:0 2px 8px rgba(249,115,22,0.3);">🔍 查询事实</span>
+          </div>
+        </div>
+        <div style="background:white;border:1px solid #fed7aa;border-radius:10px;padding:12px;margin-top:12px;font-size:10px;">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;">
+            <span style="background:#f97316;color:white;padding:2px 8px;border-radius:4px;font-size:9px;font-weight:bold;">✨ 优化结果</span>
+          </div>
+          <div style="color:#555;line-height:1.6;">你是专家。<span style="color:#f97316;font-weight:bold;">[你的提示词]</span> 请提供主要观点的3个不同出处的网页链接以便我查验...</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — 输入框+按钮横排（推荐）</h3>
+      <p>输入框与按钮同行，结果展示卡片独立，更符合工具使用习惯</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="C" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background:linear-gradient(180deg,#fff7f0 0%,#fff 100%);border:2px solid #f97316;border-radius:12px;overflow:hidden;font-family:sans-serif;">
+        <div style="background:linear-gradient(135deg,#ea580c,#f97316,#fb923c);color:white;padding:18px 20px;text-align:center;">
+          <div style="font-size:20px;font-weight:bold;letter-spacing:2px;">减少 AI 幻觉</div>
+          <div style="font-size:10px;opacity:0.85;margin-top:4px;">让 AI 给出更可信的回答</div>
+        </div>
+        <div style="padding:16px;">
+          <div style="background:white;border-radius:10px;padding:12px;box-shadow:0 2px 12px rgba(249,115,22,0.15);margin-bottom:12px;">
+            <div style="color:#f97316;font-size:10px;font-weight:bold;margin-bottom:6px;">📝 优化后的提示词</div>
+            <div style="color:#555;font-size:10px;line-height:1.6;border-left:3px solid #f97316;padding-left:8px;">你是专家。[你的提示词] 请提供主要观点的3个不同出处的网页链接以便我查验，如果你不知道就实说...</div>
+          </div>
+          <p style="color:#888;font-size:10px;margin-bottom:5px;">输入待优化的提示词</p>
+          <div style="border:2px solid #fed7aa;border-radius:8px;background:#fff;padding:8px;height:55px;color:#aaa;font-size:10px;margin-bottom:8px;">输入你的提示词...</div>
+          <div style="text-align:right;">
+            <span style="background:linear-gradient(135deg,#f97316,#ea580c);color:white;padding:8px 18px;border-radius:8px;font-size:11px;font-weight:bold;box-shadow:0 3px 10px rgba(249,115,22,0.4);">🔍 查询事实</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — 渐变头部 + 结果在上输入在下</h3>
+      <p>结果区域在输入框上方，配合渐变橙色头部，视觉层次更丰富</p>
+    </div>
+  </div>
+
+</div>
+
+<p style="text-align:center;color:#888;font-size:13px;margin-top:16px;">点击选择你喜欢的布局，也可以在终端告诉我你的想法</p>
